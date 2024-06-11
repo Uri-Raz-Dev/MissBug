@@ -24,7 +24,9 @@ export function BugDetails() {
     return <div>
         <h3>Bug Details 🐛</h3>
         <h4>{bug.title}</h4>
+        <p>Created At: {new Date(bug.createdAt).toString()}</p>
         <p>Severity: <span>{bug.severity}</span></p>
+        {<p>Description: {bug.description}</p>}
         <Link to="/bug">Back to List</Link>
     </div>
 

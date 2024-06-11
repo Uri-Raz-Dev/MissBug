@@ -1,45 +1,50 @@
 import express from 'express'
 import cookieParser from 'cookie-parser'
 
+import { bugService } from './services/bug.service.js'
+import { loggerService } from './services/logger.service.js'
+
+
 const app = express()
 
 
 app.use(express.static('public'))
 app.use(cookieParser())
 
-app.get('/api/car', (req, res) => {
-    carService.query()
-        .then(cars => res.send(cars))
+app.get('/api/bug', (req, res) => {
+    bugService.query()
+        .then(bugs => res.send(bugs))
         .catch(err => {
-            loggerService.error(`Couldn't get cars...`)
-            res.status(500).send(`Couldn't get cars...`)
+            loggerService.error(`Couldn't get bugs...`)
+            res.status(500).send(`Couldn't get bugs...`)
         })
 })
 
-app.get('/api/car/save', (req, res) => {
-    const { _id, vendor, speed } = req.query
-    const carToSave = { _id, vendor, speed: +speed }
-
-    carService.save(carToSave)
-        .then(savedCar => res.send(savedCar))
+app.get('/api/bug/save', (req, res) => {
+    const { _id, title, severity, description, createdAt } = req.query
+    const bugToSave = { _id, title, severity: +severity, createdAt, description }
+    console.log(createdAt);
+    bugService.save(bugToSave)
+        .then(savedbug => res.send(savedbug))
 })
 
-app.get('/api/car/:id', (req, res) => {
+app.get('/api/bug/:id', (req, res) => {
     const { id } = req.params
 
-    carService.getById(id)
-        .then(car => res.send(car))
+    bugService.getById(id)
+        .then(bug => res.send(bug))
 })
 
-app.get('/api/car/:id/remove', (req, res) => {
+app.get('/api/bug/:id/remove', (req, res) => {
     const { id } = req.params
 
-    carService.remove(id)
-        .then(() => res.send(`Car ${id} deleted...`))
+    bugService.remove(id)
+        .then(() => res.send(`Bug ${id} deleted...`))
 })
 
-app.get('/puki', (req, res) => {
+app.get('/api/bug', (req, res) => {
     var visitCount = req.cookies.visitCount || 0
+    console.log(req.cookies);
     // res.cookie('visitCount', ++visitCount)
     res.cookie('visitCount', ++visitCount, { maxAge: 3000 })
     res.send(`<h1>Hello Puki ${visitCount}</h1>`)
@@ -47,5 +52,5 @@ app.get('/puki', (req, res) => {
 
 app.get('/nono', (req, res) => res.redirect('/puki'))
 
-const port = 3030
+const port = 3000
 app.listen(port, () => loggerService.info(`Server listening on port http://127.0.0.1:${port}/`))
