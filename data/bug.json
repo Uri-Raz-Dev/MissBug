@@ -5,7 +5,47 @@
     "severity": 12,
     "createdAt": "2024-06-18T16:28:52.528Z",
     "description": "best bread in town",
-    "labels": ["bread", "yum", "breakfast"]
+    "labels": [
+      "bread",
+      "yum",
+      "breakfast"
+    ]
+  },
+  {
+    "_id": "668oP3",
+    "title": "fruit salad",
+    "severity": 0,
+    "createdAt": "2024-06-18T16:29:06.196Z",
+    "description": "needs more berries",
+    "labels": [
+      "fruit",
+      "salad",
+      "snack"
+    ]
+  },
+  {
+    "_id": "668oP2",
+    "title": "fruit salad",
+    "severity": 0,
+    "createdAt": "2024-06-18T16:29:06.196Z",
+    "description": "needs more berries",
+    "labels": [
+      "fruit",
+      "salad",
+      "snack"
+    ]
+  },
+  {
+    "_id": "668oP1",
+    "title": "fruit salad",
+    "severity": 0,
+    "createdAt": "2024-06-18T16:29:06.196Z",
+    "description": "needs more berries",
+    "labels": [
+      "fruit",
+      "salad",
+      "snack"
+    ]
   },
   {
     "_id": "668oP",
@@ -13,7 +53,11 @@
     "severity": 0,
     "createdAt": "2024-06-18T16:29:06.196Z",
     "description": "needs more berries",
-    "labels": ["fruit", "salad", "snack"]
+    "labels": [
+      "fruit",
+      "salad",
+      "snack"
+    ]
   },
   {
     "_id": "668oQ",
@@ -21,7 +65,10 @@
     "severity": 5,
     "createdAt": "2024-06-14T00:18:02.743Z",
     "description": "flat tire",
-    "labels": ["car", "tire", "repair"]
+    "labels": [
+      "car",
+      "tire",
+      "repair"
+    ]
   }
-
 ]

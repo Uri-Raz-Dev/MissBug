@@ -1,10 +1,9 @@
 const { useState, useEffect } = React
 
-export function BugFilter({ filterBy, onSetFilterBy }) {
+export function BugFilter({ filterBy, onSetFilterBy, bugs }) {
 
     const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
 
-    console.log(filterByToEdit);
 
     function handleChange({ target }) {
         const field = target.name
@@ -36,12 +35,15 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
 
 
     function clearFilter() {
-        return onSetFilterBy({
+        return setFilterByToEdit({
             title: '',
-            minSeverity: '',
+            severity: '',
             createdAt: 0,
-            labels: ''
+            labels: '',
+            page: 0,
+            pageSize: 5
         })
+
     }
 
     function handleDateSort(value) {
@@ -49,9 +51,12 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
         onSetFilterBy({ ...filterByToEdit, createdAt: value })
     }
 
+    function handlePage(diff) {
+        setFilterByToEdit((prevFilter) => ({ ...prevFilter, page: prevFilter.page + diff }))
+        onSetFilterBy({ ...filterByToEdit, page: filterByToEdit.page + diff })
+    }
 
-    const { title, minSeverity, createdAt, labels } = filterByToEdit
-
+    const { title, minSeverity, createdAt, labels, page } = filterByToEdit
     return (
         <section className="bug-filter">
             <h2>Filter Our Bugs</h2>
@@ -83,6 +88,9 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
                 <button>Set Filter</button>
                 <button onClick={clearFilter}>Clear Filter</button>
             </form>
+            <button onClick={() => handlePage(1)}>next page </button>
+            <button onClick={() => handlePage(-1)}>prev page </button>
+            <span>page: {page}</span>
         </section>
     )
 }
