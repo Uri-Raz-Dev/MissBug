@@ -43,7 +43,7 @@ export function BugIndex() {
       .save(bug)
       .then((savedBug) => {
         console.log('Added Bug', savedBug)
-        setBugs(prevBugs => [...prevBugs, savedBug])
+        setBugs(prevBugs => [savedBug, ...prevBugs])
         showSuccessMsg('Bug added')
       })
       .catch((err) => {

@@ -25,16 +25,16 @@ function remove(bugId) {
     return _saveBugsToFile()
 }
 
-function save(bugsToSave) {
-    if (bugsToSave._id) {
-        const idx = bugs.findIndex(bug => bug._id === bugsToSave._id)
-        bugs.splice(idx, 1, bugsToSave)
+function save(bugToSave) {
+    if (bugToSave._id) {
+        const idx = bugs.findIndex(bug => bug._id === bugToSave._id)
+        bugs.splice(idx, 1, bugToSave)
     } else {
-        bugsToSave._id = utilService.makeId()
-        bugs.push(bugsToSave)
+        bugToSave._id = utilService.makeId()
+        bugs.unshift(bugToSave)
     }
     return _saveBugsToFile()
-        .then(() => bugsToSave)
+        .then(() => bugToSave)
 }
 
 function _saveBugsToFile() {

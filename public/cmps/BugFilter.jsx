@@ -4,10 +4,7 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
 
     const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
 
-
-    // useEffect(() => {
-    //     onSetFilterBy(filterByToEdit)
-    // }, [filterByToEdit])
+    console.log(filterByToEdit);
 
     function handleChange({ target }) {
         const field = target.name
@@ -23,8 +20,9 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
                 value = target.checked
                 break
 
+
             default:
-                break;
+                break
         }
 
         setFilterByToEdit(prevFilter => ({ ...prevFilter, [field]: value }))
@@ -38,13 +36,22 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
 
 
     function clearFilter() {
-        return setFilterByToEdit({
+        return onSetFilterBy({
             title: '',
-            minSeverity: ''
+            minSeverity: '',
+            createdAt: 0,
+            labels: ''
         })
     }
 
-    const { title, minSeverity } = filterByToEdit
+    function handleDateSort(value) {
+        setFilterByToEdit((prevFilter) => ({ ...prevFilter, createdAt: value }))
+        onSetFilterBy({ ...filterByToEdit, createdAt: value })
+    }
+
+
+    const { title, minSeverity, createdAt, labels } = filterByToEdit
+
     return (
         <section className="bug-filter">
             <h2>Filter Our Bugs</h2>
@@ -54,6 +61,24 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
 
                 <label htmlFor="minSeverity">Min Severity: </label>
                 <input value={minSeverity} onChange={handleChange} type="number" placeholder="By Min Severity" id="minSeverity" name="minSeverity" />
+
+
+                <label htmlFor="all">All </label>
+                <input onChange={() => handleDateSort(0)} type="radio" id="all"
+                    name="createdAt" checked={createdAt === 0}></input>
+
+                <label htmlFor="newest">Newest </label>
+                <input onChange={() => handleDateSort(-1)} type="radio" id="newest"
+                    name="createdAt" checked={createdAt === -1}></input>
+
+                <label htmlFor="oldest">Oldest </label>
+                <input onChange={() => handleDateSort(1)} type="radio" id="oldest"
+                    name="createdAt" checked={createdAt === 1}></input>
+
+
+                <label htmlFor="labels">Labels: </label>
+                <input value={labels} onChange={handleChange} type="text" id="labels" name="labels" />
+
 
                 <button>Set Filter</button>
                 <button onClick={clearFilter}>Clear Filter</button>
