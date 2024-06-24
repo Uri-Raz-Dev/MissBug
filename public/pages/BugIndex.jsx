@@ -37,8 +37,10 @@ export function BugIndex() {
       title: prompt('Bug title?'),
       severity: +prompt('Bug severity?'),
       description: prompt('Add description'),
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
+      labels: prompt('Add labels (comma separated)').split(',').map(label => label.trim()).filter(Boolean)
     }
+
     bugService
       .save(bug)
       .then((savedBug) => {
@@ -82,7 +84,7 @@ export function BugIndex() {
       <h3>Bugs App</h3>
       <main>
         <button onClick={onAddBug}>Add Bug ⛐</button>
-        <BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} bugs={bugs} />
+        <BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} />
         <BugList bugs={bugs} onRemoveBug={onRemoveBug} onEditBug={onEditBug} />
       </main>
     </main>

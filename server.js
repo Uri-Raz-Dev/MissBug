@@ -21,9 +21,11 @@ app.get('/api/bug', (req, res) => {
 })
 
 app.post('/api/bug/', (req, res) => {
-    const { _id, title, severity, description, createdAt } = req.body
+    const { _id, title, severity, description, createdAt, labels } = req.body
 
-    const bugToSave = { _id, title, severity: +severity, createdAt: new Date().toISOString(), description }
+    const bugToSave = {
+        _id, title, severity: +severity, createdAt: new Date().toISOString(), description, labels
+    }
     bugService.save(bugToSave)
         .then(savedBug => res.send(savedBug))
         .catch(err => {
@@ -34,8 +36,11 @@ app.post('/api/bug/', (req, res) => {
 
 app.put('/api/bug/:id', (req, res) => {
     const { id } = req.params
-    const { title, severity, description, createdAt } = req.body
-    const bugToSave = { _id: id, title, severity: +severity, createdAt: new Date().toISOString(), description }
+    const { title, severity, description, createdAt, labels } = req.body
+    console.log();
+    const bugToSave = {
+        _id: id, title, severity: +severity, createdAt: new Date().toISOString(), description, labels
+    }
     bugService.save(bugToSave)
         .then(savedBug => res.send(savedBug))
         .catch(err => {
@@ -58,15 +63,10 @@ app.delete('/api/bug/:id', (req, res) => {
         .then(() => res.send(`Bug ${id} deleted...`))
 })
 
-// app.get('/api/bug', (req, res) => {
-//     var visitCount = req.cookies.visitCount || 0
-//     console.log(req.cookies);
-//     // res.cookie('visitCount', ++visitCount)
-//     res.cookie('visitCount', ++visitCount, { maxAge: 3000 })
-//     res.send(`<h1>Hello Puki ${visitCount}</h1>`)
-// })
-
-// app.get('/nono', (req, res) => res.redirect('/puki'))
-
-const port = 3000
-app.listen(port, () => loggerService.info(`Server listening on port http://127.0.0.1:${port}/`))
+app.get('/**', (req, res) => {
+    res.sendFile(path.resolve('public/index.html'))
+})
+const PORT = process.env.PORT || 3030
+app.listen(PORT, () =>
+    loggerService.info(`Server listening on port http://127.0.0.1:${PORT}/`)
+)
