@@ -1,0 +1,39 @@
+[
+  {
+    "_id": "2fd",
+    "username": "user1",
+    "fullname": "user1",
+    "password": "user1"
+  },
+  {
+    "_id": "3gf",
+    "username": "user2",
+    "fullname": "user2",
+    "password": "user2"
+  },
+  {
+    "_id": "4jk",
+    "username": "user3",
+    "fullname": "user3",
+    "password": "user3"
+  },
+  {
+    "_id": "5nm",
+    "username": "user4",
+    "fullname": "user4",
+    "password": "user4"
+  },
+  {
+    "_id": "6yu",
+    "username": "user5",
+    "fullname": "user5",
+    "password": "user5"
+  },
+  {
+    "username": "uri123",
+    "password": "1234",
+    "fullname": "uri raz",
+    "_id": "sTO9q",
+    "isAdmin": true
+  }
+]
