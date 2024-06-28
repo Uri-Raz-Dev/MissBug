@@ -7,6 +7,7 @@ const { useState, useEffect } = React
 
 export function BugIndex() {
   const [bugs, setBugs] = useState([])
+  console.log(bugs);
   const [filterBy, setFilterBy] = useState(bugService.getDefaultFilter())
   useEffect(() => {
     bugService.query(filterBy)

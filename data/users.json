@@ -35,5 +35,11 @@
     "fullname": "uri raz",
     "_id": "sTO9q",
     "isAdmin": true
+  },
+  {
+    "username": "aa",
+    "password": "aa",
+    "fullname": "aa",
+    "_id": "gBgc0"
   }
 ]

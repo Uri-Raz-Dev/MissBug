@@ -52,7 +52,6 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
     }
 
     const { title, minSeverity, createdAt, labels, page } = filterByToEdit
-    console.log(filterByToEdit);
     return (
         <section className="bug-filter">
             <h2>Filter Our Bugs</h2>

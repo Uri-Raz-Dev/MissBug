@@ -1,23 +1,8 @@
 [
   {
-    "_id": "668oP3",
-    "title": "dsad",
-    "severity": 4,
-    "createdAt": "2024-06-18T16:29:06.196Z",
-    "description": "saf",
-    "labels": [
-      "za"
-    ],
-    "owner": {
-      "_id": "sTO9q",
-      "fullname": "uri raz",
-      "isAdmin": true
-    }
-  },
-  {
     "_id": "668oP2",
     "title": "fruit salad",
-    "severity": 0,
+    "severity": 3,
     "createdAt": "2024-06-18T16:29:06.196Z",
     "description": "needs more berries",
     "labels": [
@@ -90,6 +75,63 @@
     "description": "saf",
     "labels": [
       "za"
+    ],
+    "owner": {
+      "_id": "sTO9q",
+      "fullname": "uri raz",
+      "isAdmin": true
+    }
+  },
+  {
+    "_id": "CjgZN",
+    "title": "erserr",
+    "severity": 4,
+    "createdAt": "2024-06-27T14:29:08.235Z",
+    "description": "qewrwq",
+    "labels": [
+      "a"
+    ],
+    "owner": {
+      "_id": "3gf",
+      "fullname": "user2"
+    }
+  },
+  {
+    "_id": "XCAnj",
+    "title": "ds",
+    "severity": 1,
+    "createdAt": "2024-06-27T14:58:31.107Z",
+    "description": "das",
+    "labels": [
+      "wa"
+    ],
+    "owner": {
+      "_id": "6yu",
+      "fullname": "user5"
+    }
+  },
+  {
+    "_id": "YpK3u",
+    "title": "adsgfd",
+    "severity": 23,
+    "createdAt": "2024-06-27T14:59:39.196Z",
+    "description": "asd",
+    "labels": [
+      "a"
+    ],
+    "owner": {
+      "_id": "gBgc0",
+      "fullname": "aa"
+    }
+  },
+  {
+    "_id": "f6mdC",
+    "title": "test",
+    "severity": 34,
+    "createdAt": "2024-06-27T15:01:53.849Z",
+    "description": "adaw",
+    "labels": [
+      "test"
     ],
     "owner": {
       "_id": "sTO9q",
