@@ -1,6 +1,6 @@
 import express from 'express'
-import cookieParser from 'cookie-parser'
 import path from 'path'
+import cookieParser from 'cookie-parser'
 import { userService } from './services/user.service.js'
 
 import { bugService } from './services/bug.service.js'
@@ -97,6 +97,7 @@ app.get('/api/user', (req, res) => {
 
 app.get('/api/user/:userId', (req, res) => {
     const { userId } = req.params
+    console.log(userId);
     userService.getById(userId)
         .then((user) => {
             res.send(user)
@@ -141,8 +142,9 @@ app.post('/api/auth/logout', (req, res) => {
 })
 
 app.get('/**', (req, res) => {
-    res.sendFile(path.resolve('public/index.html'))
+    res.sendFile(path.resolve('public', 'index.html'))
 })
+
 
 const PORT = process.env.PORT || 3030
 app.listen(PORT, () =>

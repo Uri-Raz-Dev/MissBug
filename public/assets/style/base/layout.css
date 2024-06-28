@@ -1,9 +1,12 @@
 .main-layout {
     display: grid;
-    grid-template-columns: 1.6rem 1fr 1.6rem;
+    position: relative;
+    min-height: 100dvh;
+    grid-template-columns: minmax(20px, 1fr) 3fr minmax(20px, 1fr);
+    grid-template-rows: minmax(20px, 100px) 3fr minmax(20px, 100px);
 }
 
-.main-layout > * {
+.main-layout>* {
     grid-column: 2;
 }
 
@@ -11,8 +14,8 @@
     grid-column: 1/-1;
 }
 
-.container {
+/* .container {
     max-width: 800px;
     padding: 1em;
     margin: auto;
-}
+} */

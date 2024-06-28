@@ -1,16 +1,44 @@
-.car-preview {
+.bug-preview {
     text-align: center;
     padding: 0.3em;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Raleway', sans-serif;
 }
 
-.car-preview h4 {
+.bug-preview h4 {
     text-transform: capitalize;
-    color: black;
+    color: #FF0000;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
 }
 
-.car-preview img {
+.bug-preview span {
+    color: #0000FF;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.bug-preview h1 {
+    color: #0000FF;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.bug-preview p {
+    margin-bottom: 0.5em;
+}
+
+.bug-preview a {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+.bug-preview img {
     max-width: 100px;
+    margin-bottom: 1em;
 }

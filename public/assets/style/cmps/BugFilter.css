@@ -1,8 +1,10 @@
-.car-filter {
+.bug-filter {
     background-color: var(--clr2bg);
 }
 
-.car-filter form {
-    display: grid;
-    grid-template-columns: 100px 200px;
+.bug-filter form {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
 }

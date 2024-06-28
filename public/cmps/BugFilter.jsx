@@ -63,9 +63,9 @@ export function BugFilter({ filterBy, onSetFilterBy }) {
                 <input value={minSeverity} onChange={handleChange} type="number" placeholder="By Min Severity" id="minSeverity" name="minSeverity" />
 
 
-                <label htmlFor="all">All </label>
+                {/* <label htmlFor="all">All </label>
                 <input onChange={() => handleDateSort(0)} type="radio" id="all"
-                    name="createdAt" checked={createdAt === 0}></input>
+                    name="createdAt" checked={createdAt === 0}></input> */}
 
                 <label htmlFor="newest">Newest </label>
                 <input onChange={() => handleDateSort(-1)} type="radio" id="newest"

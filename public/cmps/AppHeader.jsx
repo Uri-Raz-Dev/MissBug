@@ -30,11 +30,20 @@ export function AppHeader() {
   }, [])
 
   return (
-    <header>
+    <header className='app-header full'>
       <UserMsg />
-      <nav>
-        <NavLink to="/">Home</NavLink> |<NavLink to="/bug">Bugs</NavLink> |
-        <NavLink to="/about">About</NavLink>
+      <nav className="header-container">
+
+        <NavLink to="/" className="logo">MissBug</NavLink>
+
+        <nav className="nav-container">
+
+          <NavLink to="/">Home</NavLink> |
+
+          <NavLink to="/bug">Bugs</NavLink> |
+
+          <NavLink to="/about">About</NavLink></nav>
+
       </nav>
       {user ? (
         < section >
@@ -50,3 +59,4 @@ export function AppHeader() {
     </header>
   )
 }
+

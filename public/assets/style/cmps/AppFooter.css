@@ -1,0 +1,33 @@
+.footer {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer .col {
+    padding: 0 15px;
+}
+
+.footer p {
+    color: #777;
+    font-size: 24px;
+}
+
+.footer a {
+    color: #0000FF;
+    font-weight: 600;
+    text-decoration: underline;
+}

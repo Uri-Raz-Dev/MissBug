@@ -1,25 +1,8 @@
 [
   {
-    "_id": "668oP2",
-    "title": "fruit salad",
-    "severity": 3,
-    "createdAt": "2024-06-18T16:29:06.196Z",
-    "description": "needs more berries",
-    "labels": [
-      "fruit",
-      "salad",
-      "snack"
-    ],
-    "owner": {
-      "_id": "sTO9q",
-      "fullname": "uri raz",
-      "isAdmin": true
-    }
-  },
-  {
     "_id": "668oP1",
     "title": "fruit salad",
-    "severity": 0,
+    "severity": 3,
     "createdAt": "2024-06-18T16:29:06.196Z",
     "description": "needs more berries",
     "labels": [
@@ -51,23 +34,6 @@
     }
   },
   {
-    "_id": "668oQ",
-    "title": "car tire",
-    "severity": 5,
-    "createdAt": "2024-06-14T00:18:02.743Z",
-    "description": "flat tire",
-    "labels": [
-      "car",
-      "tire",
-      "repair"
-    ],
-    "owner": {
-      "_id": "sTO9q",
-      "fullname": "uri raz",
-      "isAdmin": true
-    }
-  },
-  {
     "_id": "jxE4g",
     "title": "dsad",
     "severity": 12,
@@ -80,20 +46,6 @@
       "_id": "sTO9q",
       "fullname": "uri raz",
       "isAdmin": true
-    }
-  },
-  {
-    "_id": "CjgZN",
-    "title": "erserr",
-    "severity": 4,
-    "createdAt": "2024-06-27T14:29:08.235Z",
-    "description": "qewrwq",
-    "labels": [
-      "a"
-    ],
-    "owner": {
-      "_id": "3gf",
-      "fullname": "user2"
     }
   },
   {
@@ -125,13 +77,13 @@
     }
   },
   {
-    "_id": "f6mdC",
-    "title": "test",
-    "severity": 34,
-    "createdAt": "2024-06-27T15:01:53.849Z",
-    "description": "adaw",
+    "_id": "XFMCE",
+    "title": "sfaaf",
+    "severity": 13,
+    "createdAt": "2024-06-28T15:38:00.455Z",
+    "description": "adsda",
     "labels": [
-      "test"
+      "za"
     ],
     "owner": {
       "_id": "sTO9q",

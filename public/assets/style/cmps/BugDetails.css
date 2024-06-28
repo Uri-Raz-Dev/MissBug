@@ -1,18 +1,57 @@
-.car-details {
+/* .bug-details {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.car-details h1 {
+.bug-details h1 {
     color: var(--clr1);
     font-size: 2em;
     
 }
-.car-details h5 {
+.bug-details h5 {
     color: var(--clr2);
 }
-.car-details img {
+.bug-details img {
     max-width: 200px;
     display: block;
     margin: auto;
+} */
+
+.bug-details {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.bug-details h3 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.bug-details h4 {
+    color: #555;
+    font-size: 1.2em;
+}
+
+.bug-details p {
+    color: #777;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.bug-details span {
+    font-weight: bold;
+}
+
+.bug-details a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.bug-details a:hover {
+    text-decoration: underline;
 }

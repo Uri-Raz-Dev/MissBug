@@ -40,5 +40,5 @@ function getEmptyBug(title = '', severity = '', createdAt = '', description = ''
 }
 
 function getDefaultFilter() {
-    return { title: '', minSeverity: '', labels: '', page: 0, pageSize: 5, createdAt: 0 }
+    return { title: '', minSeverity: '', labels: '', page: 0, pageSize: 5, createdAt: -1 }
 } 

@@ -1,17 +1,21 @@
 .app-header {
-    background-color: var(--clr1);
-    color: var(--clr2bg-light);
-    
+    background-color: #f4f4f4;
+    color: #777;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
 }
 
 .header-container {
     display: flex;
     align-items: center;
-
+    justify-content: space-between;
 }
 
-.header-container h1 {
-    flex-grow: 1;
+.header-container .logo {
+    font-size: 32px;
+    font-weight: bold;
 }
 
 .app-nav {
@@ -20,12 +24,16 @@
 }
 
 
-a.active {
-    color: rgb(241, 212, 241);
+a.active:not(.logo) {
+    color: #0000FF;
     font-weight: 600;
     text-decoration: underline;
 }
 
+.nav-container {
+    display: flex;
+    gap: 15px;
+}
 
 @media (max-width: 720px) {
     .app-header {
