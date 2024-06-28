@@ -19,6 +19,7 @@
     "cryptr": "^6.3.0",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "follow-redirects": "^1.15.6"
+    "follow-redirects": "^1.15.6",
+    "nodemon": "^3.1.4"
   }
 }
