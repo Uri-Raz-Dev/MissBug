@@ -17,3 +17,7 @@ input:focus {
     background-color: var(--clr1bg);
     transition: background-color 1s;
 }
+
+.add-bug {
+    margin: 0;
+}

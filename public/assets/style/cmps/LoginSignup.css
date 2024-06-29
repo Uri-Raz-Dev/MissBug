@@ -1,0 +1,10 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 1em;
+}
+
+.login-form>*:not(:first-child) {
+    margin-inline: 0.5rem;
+
+}

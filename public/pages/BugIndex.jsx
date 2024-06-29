@@ -82,8 +82,8 @@ export function BugIndex() {
   return (
     <main>
       <h3>Bugs App</h3>
-      <main>
-        <button onClick={onAddBug}>Add Bug ⛐</button>
+      <main className="bug-index">
+        <button className='add-bug' onClick={onAddBug}>Add Bug ⛐</button>
         <BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} />
         <BugList bugs={bugs} onRemoveBug={onRemoveBug} onEditBug={onEditBug} />
       </main>

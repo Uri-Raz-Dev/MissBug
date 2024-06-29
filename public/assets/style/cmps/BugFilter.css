@@ -5,6 +5,23 @@
 .bug-filter form {
     display: flex;
     align-items: center;
-    column-gap: 20px;
+    justify-content: space-around;
+    column-gap: 1rem;
+    padding-inline-end: 3.5em;
+    padding-inline-start: 0.5em;
+}
 
+.bug-filter button {
+    min-width: fit-content;
+    background-color: rgba(105, 26, 70, 0.247);
+}
+
+
+/* .bug-filter button:nth-of-type(3),
+    h2 {
+        padding-inline-start: 1em;
+    } */
+
+.bug-filter h2 {
+    padding-inline-start: 0.2em;
 }

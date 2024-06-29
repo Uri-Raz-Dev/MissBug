@@ -1,7 +1,7 @@
 .app-header {
     background-color: #f4f4f4;
     color: #777;
-    padding: 10px;
+    /* padding: 5px; */
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     font-family: 'Roboto', sans-serif;
@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-inline: 1em;
 }
 
 .header-container .logo {
